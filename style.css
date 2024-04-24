@@ -192,6 +192,11 @@ h3 {
   font-weight: 400;
 }
 
+.card-wrapper {
+  background-color: #f5f5f5 !important;
+  width: 100%;
+}
+
 #topcontainer h1 span {
   font-size: 70px;
   line-height: 70px;
@@ -982,4 +987,70 @@ ul.catalyst-list {
     margin: 0 0 20px;
     width: 100%;
   }
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: #cbd400;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background-color: #dce515;
+}
+
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(22, 160, 133, 0.5);
+}
+
+/* Modal Style */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Menyesuaikan jarak modal dari atas */
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px; /* Menggunakan border-radius untuk membulatkan sudut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek ketinggian */
+  width: 550px !important; /* Menyesuaikan lebar modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

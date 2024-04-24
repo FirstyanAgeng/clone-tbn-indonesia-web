@@ -16,37 +16,117 @@
 	<!--[if IE]><![endif]-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.2.1/css/fileinput.min.css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.2.1/themes/fa/theme.min.css" media="all" />
 	<link rel="stylesheet" href="style.css">
 	<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
 </head>
-
 <body id="backtotop">
-
-     <!-- Navbar -->
-     <nav class="navbar sticky-top">
-		<a href="#" class="logo">TBN Indonesia</a>
-        <div class="navbar-container">
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDivTitle">Participant Login</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="modal-body"><div id="form">
+  <form id="formLogin" name="formLogin" action="#" method="post" class="p-3 p-md-5">
+    <div class="form-group position-relative has-icon-left mb-4">
+      <input type="email" name="email" class="form-control" placeholder="Email" required="">
+      <div class="form-control-icon">
+        <i class="bi bi-envelope"></i>
+      </div>
+    </div>
+    <div class="form-group position-relative has-icon-left mb-4">
+      <input type="password" name="password" class="form-control" placeholder="Password" required="">
+      <div class="form-control-icon">
+        <i class="bi bi-shield-lock"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7">
+        <button class="btn btn-success btn-block btn-md-lg shadow-lg" style="border:1px solid #ddd;">
+          <i class="fa fa-unlock-alt me-2"></i> Log in
+        </button>
+      </div>
+      <div class="col-5 text-right">
+        <a class="forgot text-sm text-primary">
+          Forgot Password?
+        </a>
+      </div>
+    </div>
+  </form>
+  <form id="formForgot" name="formForgot" action="#" method="post" class="p-3 p-md-5" style="display:none">
+    <div class="form-group position-relative has-icon-left mb-4">
+      <input type="email" name="email" class="form-control" placeholder="Your registered email" required="">
+      <div class="form-control-icon">
+        <i class="bi bi-envelope"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7">
+        <button class="btn btn-success btn-block btn-md-lg shadow-lg" style="border:1px solid #ddd;">
+          <i class="fa fa-paper-plane me-2"></i> Send New Password
+        </button>
+      </div>
+      <div class="col-5 text-right">
+        <a class="forgot text-sm text-primary">
+          Back to login
+        </a>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
         </div>
-    </nav>
+		<!-- <div class="modal-content">
+		  <span class="close">&times;</span>
+		  <h2>Login</h2>
+		  <form id="loginForm">
+			<label for="email">Email:</label><br>
+			<input type="email" id="email" name="email"><br>
+			<label for="password">Password:</label><br>
+			<input type="password" id="password" name="password"><br><br>
+			<input type="submit" value="Login">
+		  </form>
+		</div> -->
+	  </div>
+<!-- Modal -->
+     <!-- Navbar -->
+	 <nav class="navbar sticky-top">
+		<a href="#" class="logo">TBN Indonesia</a>
+		<div class="navbar-container">
+			<ul class="nav-menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#events">Events</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li>
+					<a href="#ts-pricing">Ticketing</a>
+				</li>
+				<li>
+					<button id="loginButton">Login</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-    <div class="fullwidth clearfix" style="background-color: #fff; height: 65vh;" id="home">
-        <div id="topcontainer" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
-            <div class="row">
-				<div class="col-sm-xl col-lg" data-aos="fade-right"><p style="text-align: justify;">The Transformational Business Network (TBN) Indonesia's vision is to support high-potential entrepreneurs in Indonesia by providing expert coaching, technical expertise, and access to early-stage finance. They aim to scale businesses, create jobs, and unlock significant investment in the country. TBN Indonesia is committed to fostering a community based on values, with entrepreneurs who lead with integrity, scale their businesses exponentially, and create jobs and prosperity for all. They are dedicated to serving their community, utilizing their business to lift people out of poverty, and building a better world. TBN Indonesia functions as a strategic bridge connecting entrepreneurs and investors, offering distinctive investment services tailored to meet the market's needs. They are committed to creating a positive impact for their extensive beneficiaries through research, capacity building, on-demand consultation, and educational content creation.</p></div>
+	<div class="fullwidth clearfix" style="background-color: #fff; height: 65vh;" id="home">
+		<div id="topcontainer" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+			<div class="row">
+				<div class="col-sm-xl col-lg" data-aos="fade-right">
+					<p style="text-align: justify;">The Transformational Business Network (TBN) Indonesia's vision is to support high-potential entrepreneurs in Indonesia by providing expert coaching, technical expertise, and access to early-stage finance. They aim to scale businesses, create jobs, and unlock significant investment in the country. TBN Indonesia is committed to fostering a community based on values, with entrepreneurs who lead with integrity, scale their businesses exponentially, and create jobs and prosperity for all. They are dedicated to serving their community, utilizing their business to lift people out of poverty, and building a better world. TBN Indonesia functions as a strategic bridge connecting entrepreneurs and investors, offering distinctive investment services tailored to meet the market's needs. They are committed to creating a positive impact for their extensive beneficiaries through research, capacity building, on-demand consultation, and educational content creation.</p>
+				</div>
 				<div class="col d-flex justify-content-center align-items-center" data-aos="fade-left">
 					<img style="max-width: 400px;" src="https://tbnindonesia.org/images/logo-tbnindonesia.svg">
 				</div>
 			</div>
-        </div>
-    </div>
+		</div>
+	</div>
+
 
 <!-- 
 	<div class="fullwidth clearfix" style="background-color: #fff;">
@@ -112,20 +192,23 @@
 
 	<div class="arrow-separator arrow-grey"></div>
 
-	<div class="fullwidth clearfix">
-		<div class="bodycontainer">
-			<ul class="invest-advisory">
-				<li data-aos="fade-left">
+	<div class="fullwidth clearfix" style="position: relative; overflow: hidden;">
+		<div class="bodycontainer" style="position: relative;">
+			<ul class="invest-advisory" style="position: relative; list-style: none;">
+				<li data-aos="fade-left" style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
 					<h3>Investment</h3>
 					<p>Are you an entrepreneur seeking funding or an investor interested in joining our network? We function as a strategic bridge connecting entrepreneurs and investors in Indonesia, offering distinctive investment services tailored to meet the market's needs.</p>
-									</li>
-				<li data-aos="fade-right">
+				</li>
+				<li data-aos="fade-right" style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
 					<h3>Advisory</h3>
 					<p>Utilizing its core network and expertise, we have established an advisory entity that provides a wide range of key services. These services include research, capacity building, on-demand consultation, and educational content creation, all aimed at creating a positive impact for our extensive beneficiaries.</p>
-									</li>
+				</li>
+				
 			</ul>
 		</div>
+		<div class="background-blur" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/bg.png'); filter: blur(25px); z-index: -1;"></div>
 	</div>
+	
 
 	<div class="arrow-separator arrow-white"></div>
 
@@ -167,7 +250,7 @@
 											<div class=" col-6 col-md-2 px-1 px-md-0  d-flex  justify-content-md-center  align-items-stretch">
 							<div class="exhibitor card mx-0 mx-md-3 flex-fill">
 								<div class="card-body text-center">
-									<div class="logo"">
+									<div class="logo">
                 <img src="https://conference.tbnindonesia.org/assets/images/partners/tdr-one-team.png" alt="">
 									</div>
 								</div>
@@ -176,7 +259,7 @@
 											<div class=" col-6 col-md-2 px-1 px-md-0  d-flex  justify-content-md-center  align-items-stretch">
 							<div class="exhibitor card mx-0 mx-md-3 flex-fill">
 								<div class="card-body text-center">
-									<div class="logo"">
+									<div class="logo">
                 <img src="https://conference.tbnindonesia.org/assets/images/partners/yss.png" alt="">
 									</div>
 								</div>
@@ -185,7 +268,7 @@
 											<div class=" col-6 col-md-2 px-1 px-md-0  d-flex  justify-content-md-center  align-items-stretch">
 							<div class="exhibitor card mx-0 mx-md-3 flex-fill">
 								<div class="card-body text-center">
-									<div class="logo"">
+									<div class="logo">
                 <img src="https://conference.tbnindonesia.org/assets/images/partners/ActonInstitute.jpg" alt="">
 									</div>
 								</div>
@@ -371,11 +454,73 @@
 								</div>
 							</div>
 						</div>
-									</div>
+					</div>
 			</div>
 		</div>
 	</div>
-	<div class="arrow-separator arrow-grey"></div>
+
+<div class="arrow-separator arrow-grey"></div>
+
+<div class="fullwidth clearfix" id="events">
+  <div id="quotecont" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+    <!-- Tambahkan bagian pricing di sini -->
+    <section id="ts-pricing" class="ts-pricing">
+		<div class="card-wrapper p-5">
+			<div class="row d-flex justify-content-center">
+			  <div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-header">
+					<h2 class="my-0 font-weight-normal">
+					  <i class="fa fa-user" style="color: #555;"></i> Regular
+					</h2>
+				  </div>
+				  <div class="card-body">
+					<h2 class="card-title pricing-card-title">
+					  <span class="currency">IDR</span>
+					  <strong>1.500.000</strong>
+					  <small>/1 Person</small>
+					</h2>
+					<ul class="list-unstyled mt-3 mb-4">
+					  <li>1 Conference Day</li>
+					  <li>Free Coffee & Lunch</li>
+					  <li>Goodie Bags</li>
+					  <li>e-Certificate</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-block btn-default">Sold Out!</button>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+				  <div class="card-header">
+					<h2 class="my-0 font-weight-normal">
+					  <i class="fa fa-users" style="color: #555;"></i> Group Table
+					</h2>
+				  </div>
+				  <div class="card-body">
+					<h2 class="card-title pricing-card-title">
+					  <span class="currency">IDR</span>
+					  <strong>6.000.000</strong>
+					  <small>/1 Group</small>
+					</h2>
+					<ul class="list-unstyled mt-3 mb-4">
+					  <li>1 Reserved Table for 6 Persons</li>
+					  <li>1 Conference Day</li>
+					  <li>Free Coffee & Lunch</li>
+					  <li>Goodie Bags</li>
+					  <li>e-Certificate</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-block btn-default">Sold Out!</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+    </section>
+    <!-- Selesai tambahkan bagian pricing -->
+  </div>
+</div>
+
 	<div class="fullwidth clearfix" id="contact">
 		<div id="footercont" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
 			<h3>Contact Us</h3>
